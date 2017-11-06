@@ -1,6 +1,8 @@
+<app-header></app-header>
+
 <router-outlet></router-outlet>
-<!--<p-sidebar [(visible)]="true" position="right">-->
-<p-sidebar visible="true" position="right">
+
+<p-sidebar [(visible)]="display" position="right">
   <nav>
     <ul>
     <li routerLink="/home">Home</li>
@@ -10,4 +12,6 @@
   </nav>
 </p-sidebar>
 
-<!--<button type="text" (click)="display = true" pButton icon="fa-external-link-square" label="Show">SideBar</button>-->
+<button type="text" (click)="display = !display" pButton icon="fa-external-link-square" label="Show">slideBarTurnOnOff</button>
+
+<app-footer></app-footer>
