@@ -10,7 +10,6 @@ app-header,
 router-outlet,
 app-footer{
   /*display: table-row;*/
-
   /*background-color: aquamarine;*/
 }
 
@@ -42,7 +41,7 @@ app-footer {
   text-align: center;
 }
 .router-outlet{
-justify-content: center;
+/*justify-content: center;*/
   justify-items: center;
   padding: 5px 20px 5px 20px;
 }
@@ -50,14 +49,5 @@ justify-content: center;
 app-my-side-bar {
   top: 5px;
 }
-
-
-/*app-home-component {*/
-/*mindegy hogy mit írok és hova (ide, componens css-e, ruter outlet)nem teszi középre why please why????*/
-  /*align-items: center;*/
-  /*justify-items: center;*/
-  /*background-color: darkred;*/
-/*}*/
-
 
 

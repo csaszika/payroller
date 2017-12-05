@@ -16,7 +16,9 @@ nav ul  li div:hover{
   transform: scale(1.1);
   /*background-color: darkgray;*/
 }
-
+/*nav{*/
+  /*top: 0px;*/
+/*}*/
 nav >> ul >> li >> div:active{
   transform: scale(1.1);
   border-bottom: 1px solid black;
