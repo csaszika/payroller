@@ -1,0 +1,7 @@
+{
+  "data": [
+    {"ProductID" : "001", "ProductAmount" : 5},
+    {"ProductID" : "002", "ProductAmount" : 15},
+    {"ProductID" : "003", "ProductAmount" : 25}
+  ]
+}
