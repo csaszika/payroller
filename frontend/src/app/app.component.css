@@ -15,7 +15,7 @@ app-footer{
 
 app-header {
   position: relative;
-  top: 0px;
+  top: 0;
   flex: 0 1 auto;
   background-color: darkseagreen;
   min-width: 100%;
@@ -34,8 +34,8 @@ app-header {
 app-footer {
   flex: 0 1 auto;
   position: fixed;
-  left:0px;
-  bottom:0px;
+  left:0;
+  bottom:0;
   height: 70px;
   width:100%;
   text-align: center;

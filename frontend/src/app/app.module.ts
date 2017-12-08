@@ -1,50 +1,42 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-// import {Http} from '@angular/http';
+import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
+import {FooterComponent} from './components/footer/footer.component';
+import {HomeContainerComponent} from './containers/home/home.container';
+import {HeaderComponent} from './components/header/header.component';
+import {
+  MenuSideBarContainerComponent,
+} from './containers/menu-side-bar/menu-side-bar.container';
+import {StoreModule} from '@ngrx/store';
+import {initialState, reducers} from './reducers/index';
+import {AccordionModule, DataTableModule, MenuModule, SidebarModule} from 'primeng/primeng';
 import {HttpModule} from '@angular/http';
-import { AppComponent } from './app.component';
-
-import {AccordionModule, SidebarModule} from 'primeng/primeng';
-import {DataTableModule,SharedModule} from 'primeng/primeng';
-import {MenuModule,MenuItem} from 'primeng/primeng';
-
-import { AppRoutingModule } from './/app-routing.module';
-
-import { HomeComponent } from './home/home.component';
-import { FaqComponent } from './faq/faq.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { SideMenuComponent } from './side-menu/side-menu.component';
-import {DataServiceService} from "../services/data-service.service";
-import { MySideBarComponent } from './my-side-bar/my-side-bar.component';
-import { WorkdataProductsheetComponent } from './workdata-productsheet/workdata-productsheet.component';
-import { ProductsheetComponent } from './productsheet/productsheet.component';
-import { LoginComponent } from './login/login.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {AppRoutingModule} from './app-routing.module';
+import {EffectsModule} from '@ngrx/effects';
+import {MenuItemEffects} from './effects/menu-item.effects';
+import {ProductSheetEffects} from './effects/product-sheet.effects';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    FaqComponent,
-    HeaderComponent,
-    FooterComponent,
-    SideMenuComponent,
-    MySideBarComponent,
-    WorkdataProductsheetComponent,
-    ProductsheetComponent,
-    LoginComponent
-  ],
   imports: [
-    BrowserModule,
     AccordionModule,
-    MenuModule,
-    SidebarModule,
     AppRoutingModule,
+    BrowserModule,
     DataTableModule,
     HttpModule,
-
+    MenuModule,
+    SidebarModule,
+    StoreModule.forRoot(reducers, {initialState}),
+    EffectsModule.forRoot([MenuItemEffects, ProductSheetEffects])
   ],
-  providers: [DataServiceService],
+  declarations: [
+    AppComponent,
+    FooterComponent,
+    HomeContainerComponent,
+    HeaderComponent,
+    MenuSideBarContainerComponent
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
