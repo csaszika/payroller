@@ -1,0 +1,53 @@
+app {
+
+  height: 100%;
+  margin-bottom: -70px;
+  display: flex;
+  /*display: table;*/
+}
+
+app-header,
+router-outlet,
+app-footer{
+  /*display: table-row;*/
+  /*background-color: aquamarine;*/
+}
+
+app-header {
+  position: relative;
+  top: 0;
+  flex: 0 1 auto;
+  background-color: darkseagreen;
+  min-width: 100%;
+
+}
+
+.mainBody {
+  /*flex: 1 1 auto;*/
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  /*grid-template-rows: 100% 100%;*/
+  margin-top: 8px;
+  height: auto;
+}
+
+app-footer {
+  flex: 0 1 auto;
+  position: fixed;
+  left:0;
+  bottom:0;
+  height: 70px;
+  width:100%;
+  text-align: center;
+}
+.router-outlet{
+/*justify-content: center;*/
+  justify-items: center;
+  padding: 5px 20px 5px 20px;
+}
+
+app-my-side-bar {
+  top: 5px;
+}
+
+

@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*app-header {*/
+  /*position: fixed;*/
+  /*top: 0%;*/
+  /*left: 0%;*/
+  /*width: 100%;*/
+  /*height: 80px;*/
+  /*background-color: #00a6dd ;*/
+/*}*/
+/*router-outlet*/
+/*{*/
+  /*display: block;*/
+  /*position: relative;*/
+/*}*/
+
+/*app-footer*/
+/*{*/
+  /*display: block;*/
+  /*position: absolute;*/
+/*}*/
+@import '~font-awesome/css/font-awesome.css';
+app-root {
+  display: flex;
+  flex-direction: column;
+}
