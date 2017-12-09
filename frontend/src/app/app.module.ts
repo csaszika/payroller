@@ -9,12 +9,12 @@ import {
 import {StoreModule} from '@ngrx/store';
 import {initialState, reducers} from './reducers/index';
 import {AccordionModule, DataTableModule, MenuModule, SidebarModule} from 'primeng/primeng';
-import {HttpModule} from '@angular/http';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppRoutingModule} from './app-routing.module';
 import {EffectsModule} from '@ngrx/effects';
 import {MenuItemEffects} from './effects/menu-item.effects';
 import {ProductSheetEffects} from './effects/product-sheet.effects';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -22,7 +22,7 @@ import {ProductSheetEffects} from './effects/product-sheet.effects';
     AppRoutingModule,
     BrowserModule,
     DataTableModule,
-    HttpModule,
+    HttpClientModule,
     MenuModule,
     SidebarModule,
     StoreModule.forRoot(reducers, {initialState}),
