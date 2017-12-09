@@ -1,5 +1,5 @@
 import {ActionReducerMap} from '@ngrx/store';
-import * as mainFrame from './main-frame/main-frame.reducer'
+import * as mainFrame from './main-frame/main-frame.reducer';
 
 export interface AppState {
   mainFrameState: mainFrame.MainFrameState;
