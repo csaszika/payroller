@@ -5,8 +5,6 @@ Payroller application to the cloud
 ## Team members:
 
 ### Medgyesy Anna (Frontend developer)
-### Bozsákovics Réka (Frontend developer)
-### László Kornél (Backend developer)
 ### Császár Bálint (Full stack developer)
 
 ## Description:
@@ -14,7 +12,7 @@ Payroller application to the cloud
 This practicing project is about creating a frontend service with Angular 4 and NgRX library and a backend service with SpringBoot
 framework. These services are located in this common repository to represent that they belong together and easier to handle them.
 
-## Technologies used:
+## Technologies used(plan, not final):
 
 1. MySQL database
 2. Java 8
