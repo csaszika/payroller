@@ -1,26 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
-
-/*app-header {*/
-  /*position: fixed;*/
-  /*top: 0%;*/
-  /*left: 0%;*/
-  /*width: 100%;*/
-  /*height: 80px;*/
-  /*background-color: #00a6dd ;*/
-/*}*/
-/*router-outlet*/
-/*{*/
-  /*display: block;*/
-  /*position: relative;*/
-/*}*/
-
-/*app-footer*/
-/*{*/
-  /*display: block;*/
-  /*position: absolute;*/
-/*}*/
 @import '~font-awesome/css/font-awesome.css';
 app-root {
   display: flex;
   flex-direction: column;
 }
+body {
+  height: 100%;
+}
+
+app-header {
+  min-height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #237486; /* For browsers that do not support gradients */
+  background: linear-gradient(#eb01a5, #d13531);
+  /*background: url("assets/geom.png") no-repeat;*/
+  /*background-size: 15vh;*/
+  background: -webkit-linear-gradient(-90deg, #1df4ff, #559dff); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(-90deg, #1df4ff, #559dff); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(-90deg, #1df4ff, #559dff); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(-90deg, #1df4ff, #559dff); /* Standard syntax */
+  /*background-image: url("assets/geom.png");*/
+  /*background-repeat: no-repeat;*/
+
+}
+.fullRemainHeight {
+  min-height: 75vh;
+}
+app-footer {
+  min-height: 10vh;
+  background-color: red;
+}
+

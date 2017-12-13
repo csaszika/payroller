@@ -20,9 +20,12 @@ export class MenuSideBarContainerComponent implements OnInit {
    * @Panni
    * todo: why do you need ViewEncapsulation.None?
    */
+
   constructor(private store: Store<fromRoot.AppState>) {
     this.menuItems$ = this.store.select(getMenuItems);
-  }
+    this.menuItems$.subscribe(
+      (menuitems: MenuItem[])=>console.log(JSON.stringify(menuitems)));
+      }
 
   ngOnInit() {
     // should be tested the ngrx-router instead of this

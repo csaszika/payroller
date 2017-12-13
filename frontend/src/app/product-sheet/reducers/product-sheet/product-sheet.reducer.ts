@@ -1,6 +1,8 @@
 import {ProductSheet} from '../../types/product-sheet.types';
 import {PRODUCT_SHEETS_LOADED} from '../../actions/product-sheets/product-sheets-action.types';
 import * as productSheet from '../../actions/product-sheets/product-sheets.actions';
+import {createSelector} from "@ngrx/store";
+import {getProductSheetState} from "../index";
 
 export interface ProductSheetState {
   productSheets: ProductSheet[];
@@ -16,6 +18,7 @@ export function reducer(state: ProductSheetState = initialState, action: product
 
   switch (action.type) {
     case PRODUCT_SHEETS_LOADED:
+      console.log("inside ps-reducer "+JSON.stringify(action.payload));
       return {
         ...state,
         productSheets: action.payload as ProductSheet[]
@@ -24,3 +27,5 @@ export function reducer(state: ProductSheetState = initialState, action: product
       return state;
   }
 }
+
+

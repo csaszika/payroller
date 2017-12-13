@@ -1,0 +1,16 @@
+<p>
+  product-sheet works!
+</p>
+<!--<button (click)="console.log(JSON.stringify(productSheetItem$))">ConsoleLog</button>-->
+
+<ul style="list-style:none;">
+  <li>Lista eleje</li>
+  <li *ngFor="let item of productSheetItem$ | async">
+      <div>
+        {{item.productId}}
+        <hr>
+        {{item.productAmount}}
+      </div>
+   </li>
+  <li>Lista vége</li>
+</ul>

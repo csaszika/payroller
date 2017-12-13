@@ -1,0 +1,2 @@
+export const GET_FAQ_SHEET = 'GET_FAQ_SHEET';
+export const FAQ_SHEET_LOADED = 'FAQ_SHEET_LOADED';

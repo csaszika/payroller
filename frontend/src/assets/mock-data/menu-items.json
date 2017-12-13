@@ -18,5 +18,11 @@
     "name": "Work Product Sheet",
     "routerLink": "/workProductSheet",
     "icon": "fa-line-chart "
+  },
+  {
+    "name": "Logout",
+    "routerLink": "/home",
+    "icon": "fa-power-off "
   }
+
 ]

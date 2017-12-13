@@ -17,6 +17,7 @@ export class ProductSheetEffects {
     .switchMap(() =>
       this.http.get<ProductSheet[]>('assets/mock-data/product-sheets.json')
         .map(productSheets => {
+          console.log("inside ps-effect: "+JSON.stringify(productSheets));
           return new ProductSheetsLoadedAction(productSheets);
         }));
 
