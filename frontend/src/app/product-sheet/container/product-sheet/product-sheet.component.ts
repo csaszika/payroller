@@ -13,14 +13,13 @@ import {getProductSheetItems} from "../../reducers/product-sheet/product-sheet.s
 })
 export class ProductSheetComponent implements OnInit {
 
-  productSheetItem$: Observable<ProductSheet[]>;
+  productSheetItems$: Observable<ProductSheet[]>;
 
   constructor(private store: Store<fromRoot.AppState>) {
-    this.productSheetItem$ = this.store.select(getProductSheetItems);
-    this.productSheetItem$.subscribe(
-      (productSheets: ProductSheet[])=>console.log(JSON.stringify(productSheets));
-  )
-
+  // constructor(private store: Store<fromRoot.AppState>) {
+    this.productSheetItems$ = this.store.select(getProductSheetItems);
+    this.productSheetItems$.subscribe(
+      (productSheets: ProductSheet[])=>console.log(JSON.stringify(productSheets)))
 
   }
 

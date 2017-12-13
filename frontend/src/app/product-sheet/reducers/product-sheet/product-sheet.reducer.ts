@@ -1,8 +1,6 @@
 import {ProductSheet} from '../../types/product-sheet.types';
 import {PRODUCT_SHEETS_LOADED} from '../../actions/product-sheets/product-sheets-action.types';
 import * as productSheet from '../../actions/product-sheets/product-sheets.actions';
-import {createSelector} from "@ngrx/store";
-import {getProductSheetState} from "../index";
 
 export interface ProductSheetState {
   productSheets: ProductSheet[];
