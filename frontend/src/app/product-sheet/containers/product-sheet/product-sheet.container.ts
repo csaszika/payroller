@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {Observable} from "rxjs/Observable";
-import * as fromRoot from "../../reducers";
-import {ProductSheet} from "../../types/product-sheet.types";
-import {Store} from "@ngrx/store";
-import {GetProductSheetsAction} from "../../actions/product-sheets/product-sheets.actions";
-import {getProductSheets} from "../../reducers/product-sheet/product-sheet.selector";
+import {Observable} from 'rxjs/Observable';
+import * as fromRoot from '../../reducers';
+import {ProductSheet} from '../../types/product-sheet.types';
+import {Store} from '@ngrx/store';
+import {GetProductSheetsAction} from '../../actions/product-sheets/product-sheets.actions';
+import {getProductSheets} from '../../reducers/product-sheet/product-sheet.selector';
 
 @Component({
   selector: 'app-product-sheet',
@@ -20,7 +20,7 @@ export class ProductSheetContainerComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.store.dispatch(new GetProductSheetsAction())
+    this.store.dispatch(new GetProductSheetsAction());
   }
 
 }

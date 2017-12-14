@@ -1,18 +1,18 @@
 import {ActionReducerMap, createFeatureSelector} from '@ngrx/store';
-import * as productSheetReducer from './product-sheet/product-sheet.reducer'
+import * as productSheet from './product-sheet/product-sheet.reducer';
 
 export interface ProductSheetFeatureState {
-  productSheetState: productSheetReducer.ProductSheetState;
+  productSheetState: productSheet.ProductSheetState;
 }
 
 export const initialState: ProductSheetFeatureState = {
-  productSheetState: productSheetReducer.initialState
+  productSheetState: productSheet.initialState
 };
 
 export const reducers: ActionReducerMap<ProductSheetFeatureState> = {
-  productSheetState: productSheetReducer.reducer
+  productSheetState: productSheet.reducer
 };
 
 export const PRODUCT_SHEET_STATE = 'productSheetFeatureState';
 
-export const getProductSheetState = createFeatureSelector(PRODUCT_SHEET_STATE);
+export const getProductSheetFeatureState = createFeatureSelector(PRODUCT_SHEET_STATE);

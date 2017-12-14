@@ -20,7 +20,7 @@ export class HomeContainerComponent implements OnInit {
    * todo 4: for get to know ngrx action lifecycle create a container for FAQ menu point (you can find the mock json in assets)
    *
    * help for todo 4:
-   * 0. create your own module for FAQ (with routing -> like in productSheetReducer module)
+   * 0. create your own module for FAQ (with routing -> like in productSheet module)
    * 1. create ngrx actions (get, loaded, add new faq, delete faq)
    * 2. create an effect to get faq data from json(your effect should be added to module)
    * 3. create your own reducer and State (FaqState)

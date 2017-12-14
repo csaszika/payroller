@@ -1,10 +1,6 @@
-<p>
-  product-sheet works!
-</p>
-
-<ul style="list-style:none;">
+<ul>
   <li>Lista eleje</li>
-  <li *ngFor="let item of productSheetItems$ | async">
+  <li *ngFor="let item of productSheets$ | async">
       <div>
         {{item.productId}}
         <hr>
