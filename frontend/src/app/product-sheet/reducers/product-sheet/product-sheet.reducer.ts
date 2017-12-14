@@ -16,7 +16,6 @@ export function reducer(state: ProductSheetState = initialState, action: product
 
   switch (action.type) {
     case PRODUCT_SHEETS_LOADED:
-      console.log("inside ps-reducer "+JSON.stringify(action.payload));
       return {
         ...state,
         productSheets: action.payload as ProductSheet[]

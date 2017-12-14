@@ -1,9 +1,9 @@
 import {ProductSheetState} from "./product-sheet.reducer";
-// import {getProductSheetState} from "../index";
 import {createSelector} from "@ngrx/store";
-import {AppState, getAppState} from "../index";
+import {ProductSheetFeatureState, getProductSheetState} from '../index';
 
-export const getProductSheetState = createSelector(getAppState,
-  (appState: AppState) => appState.productSheetState);
+export const getProductSheetState = createSelector(getProductSheetState,
+  (appState: ProductSheetFeatureState) => appState.productSheetState);
 
-export const getProductSheetItems = createSelector(getProductSheetState,(state: ProductSheetState) => state.productSheets);
+export const getProductSheets = createSelector(getProductSheetState,
+  (state: ProductSheetState) => state.productSheets);
