@@ -1,0 +1,11 @@
+<ul>
+  <li>Lista eleje</li>
+  <li *ngFor="let item of productSheets$ | async">
+      <div>
+        {{item.productId}}
+        <hr>
+        {{item.productAmount}}
+      </div>
+   </li>
+  <li>Lista vége</li>
+</ul>

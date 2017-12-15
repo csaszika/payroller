@@ -6,6 +6,7 @@ import {EffectsModule} from '@ngrx/effects';
 import {ProductSheetEffects} from './effects/product-sheet.effects';
 import {HttpClientModule} from '@angular/common/http';
 import {ProductSheetRoutingModule} from './product-sheet-routing.module';
+import { ProductSheetContainerComponent } from './containers/product-sheet/product-sheet.container';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import {ProductSheetRoutingModule} from './product-sheet-routing.module';
     StoreModule.forFeature(PRODUCT_SHEET_STATE, reducers, {initialState}),
     EffectsModule.forFeature([ProductSheetEffects])
   ],
-  declarations: []
+  declarations: [ProductSheetContainerComponent]
 })
 export class ProductSheetModule { }
