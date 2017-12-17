@@ -15,6 +15,9 @@ import {EffectsModule} from '@ngrx/effects';
 import {MenuItemEffects} from './app-core/effects/menu-item.effects';
 import {HttpClientModule} from '@angular/common/http';
 import {ProductSheetModule} from './product-sheet/product-sheet.module';
+import {FaqContainerComponent} from './faq/containers/faq/faq.container';
+import {FaqModule} from "./faq/faq.module";
+
 
 @NgModule({
   imports: [
@@ -23,6 +26,7 @@ import {ProductSheetModule} from './product-sheet/product-sheet.module';
     DataTableModule,
     HttpClientModule,
     ProductSheetModule,
+    FaqModule,
     SidebarModule,
     StoreModule.forRoot(reducers, {initialState}),
     EffectsModule.forRoot([MenuItemEffects])
@@ -32,7 +36,8 @@ import {ProductSheetModule} from './product-sheet/product-sheet.module';
     FooterComponent,
     HomeContainerComponent,
     HeaderComponent,
-    MenuSideBarContainerComponent
+    MenuSideBarContainerComponent,
+
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
