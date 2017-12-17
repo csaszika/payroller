@@ -16,10 +16,7 @@ export function reducer(state: ProductSheetState = initialState, action: product
 
   switch (action.type) {
     case PRODUCT_SHEETS_LOADED:
-      return {
-        ...state,
-        productSheets: action.payload as ProductSheet[]
-      };
+      return action.execute(state, action);
     default:
       return state;
   }

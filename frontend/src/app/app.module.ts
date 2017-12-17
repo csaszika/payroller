@@ -1,6 +1,5 @@
 import {CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import {AppComponent} from './app.component';
-import {FooterComponent} from './app-core/components/footer/footer.component';
 import {HomeContainerComponent} from './app-core/containers/home/home.container';
 import {HeaderComponent} from './app-core/components/header/header.component';
 import {
@@ -33,7 +32,6 @@ import {FaqModule} from "./faq/faq.module";
   ],
   declarations: [
     AppComponent,
-    FooterComponent,
     HomeContainerComponent,
     HeaderComponent,
     MenuSideBarContainerComponent,

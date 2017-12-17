@@ -9,16 +9,11 @@ import {getHeaderTitle} from '../../reducers/main-frame/main-frame.selectors';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
-  // todo: discuss what this component should do
-  title$: Observable<string>; // = 'Csaszi\'s father app';
+  title$: Observable<string>;
 
   constructor(private store: Store<fromRoot.AppState>) {
     this.title$ = this.store.select(getHeaderTitle);
   }
-
-  ngOnInit() {
-  }
-
 }

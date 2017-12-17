@@ -5,23 +5,23 @@
     "icon": "fa-home"
   },
   {
+    "name": "Product Sheets",
+    "routerLink": "/productSheet",
+    "icon": "fa-book"
+  },
+  {
+    "name": "Payroller",
+    "routerLink": "/payroller",
+    "icon": "fa-user-secret"
+  },
+  {
     "name": "FAQ",
     "routerLink": "/faq",
     "icon": "fa-question-circle"
   },
   {
-    "name": "Product Sheet",
-    "routerLink": "/productSheet",
-    "icon": "fa-book"
-  },
-  {
-    "name": "Work Product Sheet",
-    "routerLink": "/workProductSheet",
-    "icon": "fa-line-chart "
-  },
-  {
     "name": "Logout",
-    "routerLink": "/home",
+    "routerLink": "/login",
     "icon": "fa-power-off "
   }
 
