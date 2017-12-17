@@ -1,40 +1,14 @@
-
 <app-header></app-header>
 
-  <div class="row fullRemainHeight">
-      <div class="col-lg-2  ">
-        <menu-side-bar></menu-side-bar>
-      </div>
+<div class="row fullRemainHeight">
 
-      <div class="col-lg-9 d-flex align-items-center">
-        <router-outlet></router-outlet>
-      </div>
+  <div class="col-lg-2">
+    <menu-side-bar></menu-side-bar>
+  </div>
 
-    </div>
-<app-footer></app-footer>
+  <!-- overflow problem -->
+  <div class="col-lg-10">
+    <router-outlet></router-outlet>
+  </div>
 
-<!--<div class="row">-->
-  <!--<div class="col-sm-8" style="background-color: aquamarine">col-sm-8</div>-->
-  <!--<div class="col-sm-4" style="background-color: red">col-sm-4</div>-->
-<!--</div>-->
-<!--<div class="row">-->
-  <!--<div class="col-sm" style="background-color: gray">col-sm</div>-->
-  <!--<div class="col-sm" style="background-color: salmon">col-sm</div>-->
-  <!--<div class="col-sm" style="background-color: saddlebrown">col-sm</div>-->
-<!--</div>-->
-
-<!--<hr>-->
-
-<!--<div class="container-fluid">-->
-<!--<div class="row">-->
-  <!--<div class="col-lg-8" style="background-color: aquamarine">col-sm-8</div>-->
-  <!--<div class="col-lg-4" style="background-color: red">col-sm-4</div>-->
-<!--</div>-->
-<!--</div>-->
-
-
-<!--<div class="row">-->
-  <!--<div class="col-lg-2" style="background-color: gray">col-sm</div>-->
-  <!--<div class="col-lg-4" style="background-color: salmon">col-sm</div>-->
-  <!--<div class="col-lg-6" style="background-color: saddlebrown">col-sm</div>-->
-<!--</div>-->
+</div>

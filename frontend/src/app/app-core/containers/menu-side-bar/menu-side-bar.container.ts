@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Store} from '@ngrx/store';
 import * as fromRoot from '../../reducers';
 import {Observable} from 'rxjs/Observable';
@@ -20,12 +20,7 @@ export class MenuSideBarContainerComponent implements OnInit {
   }
 
   ngOnInit() {
-    // should be tested the ngrx-router instead of this
     this.store.dispatch(new GetMenuItemsAction());
-  }
-
-  setSelectedMenuItem(name: string) {
-    // this.store.dispatch(new SetSelectedMenuItem());
   }
 
 }

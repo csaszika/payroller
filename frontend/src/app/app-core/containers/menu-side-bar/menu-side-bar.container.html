@@ -1,27 +1,10 @@
-<!--<nav>-->
-  <!--<ul style="list-style:none;">-->
-    <!--<li *ngFor="let item of menuItemAction$ | async">-->
-      <!--<div routerLink={{item.routerLink}}-->
-           <!--[ngClass]="{'selectedMenuItem' : (item.name == selectedMenuItem)}"-->
-           <!--(click)="setSelectedMenuItem(item.name)"-->
-           <!--(focus)="blur" >-->
-      <!--<span class="ui-button-icon-left ui-clickable fa fa-fw {{item.icon}}" ></span>-->
-      <!--<span >{{item.name}}</span>-->
-      <!--</div>-->
-    <!--</li>-->
-  <!--</ul>-->
-<!--</nav>-->
-
 <nav>
-  <ul style="list-style:none;">
-    <li *ngFor="let item of menuItems$ | async">
-      <div routerLink={{item.routerLink}}
-           [ngClass]="{'selectedMenuItem' : (item.name == selectedMenuItem)}"
-           (click)="setSelectedMenuItem(item.name)"
-           (focus)="blur" >
-        <span class="ui-button-icon-left ui-clickable fa fa-fw {{item.icon}}" ></span>
-        <span >{{item.name}}</span>
-      </div>
-    </li>
-  </ul>
+  <a *ngFor="let item of menuItems$ | async">
+    <div routerLink={{item.routerLink}}
+         [ngClass]="{'selectedMenuItem' : (item.name == selectedMenuItem)}"
+         (focus)="blur" >
+      <span class="ui-button-icon-left ui-clickable fa fa-fw {{item.icon}}" ></span>
+      <span >{{item.name}}</span>
+    </div>
+  </a>
 </nav>

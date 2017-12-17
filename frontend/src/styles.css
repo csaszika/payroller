@@ -14,21 +14,13 @@ app-header {
   justify-content: center;
   background: #237486; /* For browsers that do not support gradients */
   background: linear-gradient(#eb01a5, #d13531);
-  /*background: url("assets/geom.png") no-repeat;*/
-  /*background-size: 15vh;*/
   background: -webkit-linear-gradient(-90deg, #1df4ff, #559dff); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(-90deg, #1df4ff, #559dff); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(-90deg, #1df4ff, #559dff); /* For Firefox 3.6 to 15 */
   background: linear-gradient(-90deg, #1df4ff, #559dff); /* Standard syntax */
-  /*background-image: url("assets/geom.png");*/
-  /*background-repeat: no-repeat;*/
 
 }
 .fullRemainHeight {
   min-height: 75vh;
-}
-app-footer {
-  min-height: 10vh;
-  background-color: red;
 }
 

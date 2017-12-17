@@ -7,10 +7,12 @@ import {ProductSheetEffects} from './effects/product-sheet.effects';
 import {HttpClientModule} from '@angular/common/http';
 import {ProductSheetRoutingModule} from './product-sheet-routing.module';
 import { ProductSheetContainerComponent } from './containers/product-sheet/product-sheet.container';
+import {DataTableModule} from 'primeng/primeng';
 
 @NgModule({
   imports: [
     CommonModule,
+    DataTableModule,
     HttpClientModule,
     ProductSheetRoutingModule,
     StoreModule.forFeature(PRODUCT_SHEET_STATE, reducers, {initialState}),
