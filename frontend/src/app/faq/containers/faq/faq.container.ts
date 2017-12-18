@@ -1,4 +1,3 @@
-
 import {Component, OnInit} from '@angular/core';
 import {FaqType} from '../../types/faq.type';
 import {Observable} from 'rxjs/Observable';
@@ -14,11 +13,12 @@ import {GetFaqsAction} from '../../actions/faq.actions';
 })
 
 export class FaqContainerComponent implements OnInit {
+
   faqs: Observable<FaqType[]>;
 
   constructor(private store: Store<fromRoot.FaqFeatureState>) {
     this.faqs = this.store.select(getFaqs);
-    console.log('faqcomponent: '+this.faqs);
+    console.log('faqcomponent: ' + this.faqs);
   }
   ngOnInit() {
     this.store.dispatch(new GetFaqsAction());

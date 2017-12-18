@@ -1,5 +1,5 @@
 import {FaqType} from '../types/faq.type';
-import * as faqActions from '../actions';
+import * as faqActions from '../actions/faq.actions';
 import {FAQS_LOADED} from '../actions/faq.action.types';
 
 
@@ -7,7 +7,7 @@ export interface FaqsState {
   faqs: FaqType[];
 }
 export const initialState: FaqsState = {
-  faqs:[],
+  faqs: [],
 };
 export function reducer(state: FaqsState = initialState, action: faqActions.Actions): FaqsState {
 
