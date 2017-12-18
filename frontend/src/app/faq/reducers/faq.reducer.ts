@@ -1,6 +1,7 @@
-import {FaqType} from "../types/faq.type";
-import {FAQS_LOADED} from "../actions/faq.action.types";
+import {FaqType} from '../types/faq.type';
 import * as faqActions from '../actions';
+import {FAQS_LOADED} from '../actions/faq.action.types';
+
 
 export interface FaqsState {
   faqs: FaqType[];

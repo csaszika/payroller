@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http';
 import {Actions, Effect} from '@ngrx/effects';
 import {Injectable} from '@angular/core';
 import {FaqType} from '../types/faq.type';
-import {FaqsLoadedAction} from "../actions/faq.actions";
+import {FaqsLoadedAction} from '../actions/faq.actions';
 
 @Injectable()
 export class FaqEffects {
@@ -15,7 +15,6 @@ export class FaqEffects {
     .switchMap(() =>
       this.http.get<FaqType[]>('assets/mock-data/faqs.json')
         .map(faqs => {
-          console.log('in effect constr: '+JSON.stringify(faqs));
           return new FaqsLoadedAction(faqs);
         }));
 

@@ -1,11 +1,9 @@
 <ul>
-  <li>Lista eleje</li>
   <li *ngFor="let item of faqs | async">
     <div>
-      {{item.question}}
+      Kérdés: {{item.question}}
       <hr>
-      {{item.answer}}
+      Válasz: {{item.answer}}
     </div>
   </li>
-  <li>Lista vége</li>
 </ul>

@@ -5,7 +5,7 @@ import {Observable} from 'rxjs/Observable';
 import {getFaqs} from '../../reducers/faq.selector';
 import {Store} from '@ngrx/store';
 import * as fromRoot from '../../reducers';
-import {GetFaqsAction} from "../../actions/faq.actions";
+import {GetFaqsAction} from '../../actions/faq.actions';
 
 @Component({
   selector: 'app-faq-component',
