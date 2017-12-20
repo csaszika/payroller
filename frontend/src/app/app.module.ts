@@ -14,8 +14,7 @@ import {EffectsModule} from '@ngrx/effects';
 import {MenuItemEffects} from './app-core/effects/menu-item.effects';
 import {HttpClientModule} from '@angular/common/http';
 import {ProductSheetModule} from './product-sheet/product-sheet.module';
-import {FaqContainerComponent} from './faq/containers/faq/faq.container';
-import {FaqModule} from "./faq/faq.module";
+import {FaqModule} from './faq/faq.module';
 
 
 @NgModule({
@@ -23,19 +22,18 @@ import {FaqModule} from "./faq/faq.module";
     AppRoutingModule,
     BrowserModule,
     DataTableModule,
+    FaqModule,
     HttpClientModule,
     ProductSheetModule,
-    FaqModule,
     SidebarModule,
     StoreModule.forRoot(reducers, {initialState}),
     EffectsModule.forRoot([MenuItemEffects])
   ],
   declarations: [
     AppComponent,
-    HomeContainerComponent,
     HeaderComponent,
+    HomeContainerComponent,
     MenuSideBarContainerComponent,
-
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

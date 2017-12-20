@@ -18,7 +18,6 @@ export class FaqContainerComponent implements OnInit {
 
   constructor(private store: Store<fromRoot.FaqFeatureState>) {
     this.faqs = this.store.select(getFaqs);
-    console.log('faqcomponent: ' + this.faqs);
   }
   ngOnInit() {
     this.store.dispatch(new GetFaqsAction());
