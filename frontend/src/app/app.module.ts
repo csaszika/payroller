@@ -14,12 +14,15 @@ import {EffectsModule} from '@ngrx/effects';
 import {MenuItemEffects} from './app-core/effects/menu-item.effects';
 import {HttpClientModule} from '@angular/common/http';
 import {ProductSheetModule} from './product-sheet/product-sheet.module';
+import {FaqModule} from './faq/faq.module';
+
 
 @NgModule({
   imports: [
     AppRoutingModule,
     BrowserModule,
     DataTableModule,
+    FaqModule,
     HttpClientModule,
     ProductSheetModule,
     SidebarModule,
@@ -28,9 +31,9 @@ import {ProductSheetModule} from './product-sheet/product-sheet.module';
   ],
   declarations: [
     AppComponent,
-    HomeContainerComponent,
     HeaderComponent,
-    MenuSideBarContainerComponent
+    HomeContainerComponent,
+    MenuSideBarContainerComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
