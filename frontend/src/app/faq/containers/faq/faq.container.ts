@@ -11,11 +11,15 @@ import {GetFaqsAction} from '../../actions/faq.actions';
   templateUrl: './faq.container.html',
   styleUrls: ['./faq.container.css']
 })
-
 export class FaqContainerComponent implements OnInit {
 
   faqs: Observable<FaqType[]>;
 
+  /**
+   * @Panni
+   * todo: use ADD_FAQ and REMOVE_FAQ
+   * todo: faq elements in separated blocks with remove button/icon/whatSatisfiesYou
+   */
   constructor(private store: Store<fromRoot.FaqFeatureState>) {
     this.faqs = this.store.select(getFaqs);
   }

@@ -1,3 +1,4 @@
+-- Payroller old database
 CREATE TABLE T_HEADER
 (
   HEADER_ID NUMBER(15,0) PRIMARY KEY NOT NULL,
