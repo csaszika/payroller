@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {FaqType} from '../../types/faq.type';
 import {Observable} from 'rxjs/Observable';
 import {getFaqs} from '../../reducers/faq.selector';
 import {Store} from '@ngrx/store';
 import * as fromRoot from '../../reducers';
-import {GetFaqsAction} from '../../actions/faq.actions';
+import {GetFaqsAction, PostFaqsAction} from '../../actions/faq.actions';
+import {Faq} from "../../types/faq.types";
 
 @Component({
   selector: 'app-faq-component',
@@ -13,7 +13,7 @@ import {GetFaqsAction} from '../../actions/faq.actions';
 })
 export class FaqContainerComponent implements OnInit {
 
-  faqs: Observable<FaqType[]>;
+  faqs: Observable<Faq[]>;
 
   /**
    * @Panni
@@ -25,5 +25,10 @@ export class FaqContainerComponent implements OnInit {
   }
   ngOnInit() {
     this.store.dispatch(new GetFaqsAction());
+  }
+// please dont change this action logic
+  onAddQuestion(){
+    console.log('button works');
+    this.store.dispatch(new PostFaqsAction({question: 'Mi kell még',answer: 'sok kaja'}));
   }
 }

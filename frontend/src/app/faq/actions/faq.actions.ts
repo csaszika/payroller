@@ -1,6 +1,6 @@
 import {Action} from '@ngrx/store';
-import {FAQS_LOADED, GET_FAQS} from './faq.action.types';
-import {FaqType} from '../types/faq.type';
+import {ADD_FAQ, FAQS_LOADED, GET_FAQS, POST_FAQ} from './faq.action.types';
+import {Faq} from '../types/faq.types';
 
 
 export class GetFaqsAction implements Action {
@@ -12,8 +12,19 @@ export class GetFaqsAction implements Action {
 export class FaqsLoadedAction implements Action {
   readonly type = FAQS_LOADED;
 
-  constructor(public payload: FaqType[]) {}
+  constructor(public payload: Faq[]) {}
+}
+//ide felvenni minden actiont
+
+export class PostFaqsAction implements Action {
+  readonly type = POST_FAQ;
+  constructor(public payload: Faq) {}
+}
+
+export class AddFaqAction implements Action {
+  readonly type = ADD_FAQ;
+  constructor(public payload: Faq) {}
 }
 
 export type Actions = GetFaqsAction
-  | FaqsLoadedAction;
+  | FaqsLoadedAction | PostFaqsAction | AddFaqAction;

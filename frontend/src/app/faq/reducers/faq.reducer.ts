@@ -1,10 +1,10 @@
-import {FaqType} from '../types/faq.type';
+import {Faq} from '../types/faq.types';
 import * as faqActions from '../actions/faq.actions';
-import {FAQS_LOADED} from '../actions/faq.action.types';
+import {ADD_FAQ, FAQS_LOADED} from '../actions/faq.action.types';
 
 
 export interface FaqsState {
-  faqs: FaqType[];
+  faqs: Faq[];
 }
 export const initialState: FaqsState = {
   faqs: [],
@@ -15,8 +15,15 @@ export function reducer(state: FaqsState = initialState, action: faqActions.Acti
     case FAQS_LOADED:
          return {
         ...state,
-        faqs: action.payload as FaqType[]
+        faqs: action.payload as Faq[]
       };
+
+    case ADD_FAQ:
+      return {
+        ...state,
+        faqs: [...state.faqs, action.payload as Faq]
+      }
+
     default:
       return state;
   }

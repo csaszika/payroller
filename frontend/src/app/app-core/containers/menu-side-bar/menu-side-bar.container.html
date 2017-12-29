@@ -3,8 +3,9 @@
     <div routerLink={{item.routerLink}}
          [ngClass]="{'selectedMenuItem' : (item.name == selectedMenuItem)}"
          (focus)="blur" >
-      <span class="ui-button-icon-left ui-clickable fa fa-fw {{item.icon}}" ></span>
-      <span >{{item.name}}</span>
+      <span class="ui-button-icon-left ui-clickable fa fa-fw {{item.icon }}" ></span>
+      <!--<span >{{ item.name | translate}}</span>-->
+      <span >{{item.name }}</span>
     </div>
   </a>
 </nav>
