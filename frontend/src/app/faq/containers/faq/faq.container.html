@@ -2,20 +2,14 @@
   <li *ngFor="let item of faqs | async">
     <div>
       Kérdés: {{item.question}}
-      <hr>
       Válasz: {{item.answer}}
     </div>
   </li>
-
-  <!--//reactive form: két darab input, question, anwser, form control-->
-  <!--//pattern-->
-
 </ul>
 <hr>
 
 <form>
-<textarea type="text"  placeholder="question" rows="6"></textarea>
-<textarea type="text"  placeholder="anwser" rows="2"></textarea>
-
-<button type="button" (click)="onAddQuestion()">Add</button>
+  <textarea type="text"  placeholder="question" rows="6"></textarea>
+  <textarea type="text"  placeholder="anwser" rows="2"></textarea>
+  <button type="button" (click)="onAddQuestion()">Add</button>
 </form>

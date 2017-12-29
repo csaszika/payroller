@@ -22,10 +22,9 @@ export class FaqEffects {
   postFaq$ = this.actions$
     .ofType(POST_FAQ)
     .map(action => {
-      return new AddFaqAction(action.payload  as Faq);
+      return new AddFaqAction(action.payload as Faq);
       }
     );
-  //mapet itt kicserélni késpbb switchmapre...
   constructor(private actions$: Actions, private http: HttpClient) {
 
   }

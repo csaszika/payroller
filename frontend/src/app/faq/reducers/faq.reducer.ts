@@ -22,7 +22,7 @@ export function reducer(state: FaqsState = initialState, action: faqActions.Acti
       return {
         ...state,
         faqs: [...state.faqs, action.payload as Faq]
-      }
+      };
 
     default:
       return state;

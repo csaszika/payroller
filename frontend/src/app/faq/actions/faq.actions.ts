@@ -14,7 +14,6 @@ export class FaqsLoadedAction implements Action {
 
   constructor(public payload: Faq[]) {}
 }
-//ide felvenni minden actiont
 
 export class PostFaqsAction implements Action {
   readonly type = POST_FAQ;
