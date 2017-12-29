@@ -6,7 +6,7 @@ import {Faq} from '../types/faq.types';
 export class GetFaqsAction implements Action {
   readonly type = GET_FAQS;
 
-  constructor() {}
+  constructor(public payload: any = null) {}
 }
 
 export class FaqsLoadedAction implements Action {
