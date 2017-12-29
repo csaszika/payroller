@@ -4,7 +4,7 @@ import {HttpClient} from '@angular/common/http';
 import {Actions, Effect} from '@ngrx/effects';
 import {Injectable} from '@angular/core';
 import {Faq} from '../types/faq.types';
-import {AddFaqAction, FaqsLoadedAction} from '../actions/faq.actions';
+import {AddFaqAction, FaqsLoadedAction, PostFaqsAction} from '../actions/faq.actions';
 
 @Injectable()
 export class FaqEffects {
@@ -21,10 +21,11 @@ export class FaqEffects {
   @Effect()
   postFaq$ = this.actions$
     .ofType(POST_FAQ)
-    .map(action => {
+    .map((action: PostFaqsAction) => {
       return new AddFaqAction(action.payload as Faq);
       }
     );
+
   constructor(private actions$: Actions, private http: HttpClient) {
 
   }

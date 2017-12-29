@@ -26,4 +26,6 @@ export class AddFaqAction implements Action {
 }
 
 export type Actions = GetFaqsAction
-  | FaqsLoadedAction | PostFaqsAction | AddFaqAction;
+  | FaqsLoadedAction
+  | PostFaqsAction
+  | AddFaqAction;

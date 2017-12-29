@@ -26,8 +26,8 @@ export class FaqContainerComponent implements OnInit {
   ngOnInit() {
     this.store.dispatch(new GetFaqsAction());
   }
-  onAddQuestion(){
-    console.log('button works');
-    this.store.dispatch(new PostFaqsAction({question: 'Mi kell még',answer: 'sok kaja'}));
+
+  onAddQuestion() {
+    this.store.dispatch(new PostFaqsAction({question: 'Mi kell még', answer: 'sok kaja'}));
   }
 }

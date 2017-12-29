@@ -1,10 +1,14 @@
 <ul>
-  <li *ngFor="let item of faqs | async">
+  <li *ngFor="let faq of faqs | async">
     <div>
-      Kérdés: {{item.question}}
-      Válasz: {{item.answer}}
+      Kérdés: {{faq.question}}
+      Válasz: {{faq.answer}}
     </div>
   </li>
+
+  <!--//reactive form: két darab input, question, anwser, form control-->
+  <!--//pattern-->
+
 </ul>
 <hr>
 
