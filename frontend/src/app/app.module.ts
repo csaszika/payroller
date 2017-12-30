@@ -15,6 +15,8 @@ import {MenuItemEffects} from './app-core/effects/menu-item.effects';
 import {HttpClientModule} from '@angular/common/http';
 import {ProductSheetModule} from './product-sheet/product-sheet.module';
 import {FaqModule} from './faq/faq.module';
+import {TranslationService} from "../translation/translation.service";
+import {TranslatePipe} from "../translation/translate.pipe";
 
 
 @NgModule({
@@ -34,9 +36,10 @@ import {FaqModule} from './faq/faq.module';
     HeaderComponent,
     HomeContainerComponent,
     MenuSideBarContainerComponent,
+    TranslatePipe
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
+  providers: [TranslationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,11 @@
 <div id="header" >
    <h1>{{title$ | async}}</h1>
-</div>
 
+          <ul>
+           <li *ngFor="let language of languages" (click)="setLanguage(language)">
+             {{language}}
+           </li>
+         </ul>
+</div>
 
 

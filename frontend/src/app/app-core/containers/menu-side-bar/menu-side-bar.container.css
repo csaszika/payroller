@@ -34,11 +34,6 @@ nav >> a >> div:active{
   transform: scale(1.1);
 }
 
-div.selectedMenuItem
-{
-  text-decoration: none !important;
-}
-
 :focus {
   outline: none;
 }
