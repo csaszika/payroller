@@ -1,19 +1,28 @@
 <ul>
-  <li *ngFor="let faq of faqs | async">
-    <div>
+  <li *ngFor="let faq of faqs | async; let i = index">
+    <div (click)="onSelect(i)">
       Kérdés: {{faq.question}}
       Válasz: {{faq.answer}}
     </div>
   </li>
-
-  <!--//reactive form: két darab input, question, anwser, form control-->
-  <!--//pattern-->
-
 </ul>
 <hr>
 
-<form>
-  <textarea type="text"  placeholder="question" rows="6"></textarea>
-  <textarea type="text"  placeholder="anwser" rows="2"></textarea>
-  <button type="button" (click)="onAddQuestion()">Add</button>
-</form>
+<div (click)="clearSelection()">
+  <form [formGroup]="faqForm">
+    <textarea
+      type="text"
+      placeholder="raise a new question"
+      rows="3"
+      formControlName="question"></textarea>
+    <textarea
+      type="text"
+      placeholder="give an answer"
+      rows="3"
+      formControlName="answer"></textarea>
+  </form>
+
+  <button type="button" (click)="onAddQuestion()" class="btn btn-primary" [disabled]="!faqForm.valid">Add</button>
+  <button type="button" (click)="onDeleteQuestion(selectedFaq)" class="btn btn-danger" [disabled] ="selectedFaq == null">Delete</button>
+
+</div>

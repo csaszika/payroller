@@ -3,8 +3,9 @@ import {Observable} from 'rxjs/Observable';
 import {getFaqs} from '../../reducers/faq.selector';
 import {Store} from '@ngrx/store';
 import * as fromRoot from '../../reducers';
-import {GetFaqsAction, PostFaqsAction} from '../../actions/faq.actions';
+import {DeleteFaqAction, GetFaqsAction, PostFaqAction} from '../../actions/faq.actions';
 import {Faq} from "../../types/faq.types";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-faq-component',
@@ -14,6 +15,9 @@ import {Faq} from "../../types/faq.types";
 export class FaqContainerComponent implements OnInit {
 
   faqs: Observable<Faq[]>;
+  faqForm: FormGroup;
+  isSelected: false;
+  selectedFaq: Faq;
 
   /**
    * @Panni
@@ -25,9 +29,34 @@ export class FaqContainerComponent implements OnInit {
   }
   ngOnInit() {
     this.store.dispatch(new GetFaqsAction());
+
+    this.faqForm = new FormGroup(
+      {
+        'question': new FormControl(null, Validators.required),
+        'answer': new FormControl(null, Validators.required)
+      }
+    );
   }
 
   onAddQuestion() {
-    this.store.dispatch(new PostFaqsAction({question: 'Mi kell még', answer: 'sok kaja'}));
+    if(this.faqForm.valid)
+    {this.store.dispatch(new PostFaqAction({question: this.faqForm.get('question').value, answer: this.faqForm.get('answer').value}));
+    this.faqForm.reset();}
+  }
+
+  onSelect(index: number){
+    this.faqs.subscribe((faqs: Faq[]) => {
+      return this.selectedFaq = faqs[index];
+    })
+    ;
+  }
+
+  onDeleteQuestion(faq: Faq) {
+    this.store.dispatch(new DeleteFaqAction(faq));
+    this.clearSelection();
+  }
+
+  clearSelection(){
+    this.selectedFaq = null;
   }
 }
