@@ -1,14 +1,17 @@
 [
   {
     "question": "Mi a baja Panninak?",
-    "answer": "Csak annyi, hogy izgul."
+    "answer": "Csak annyi, hogy izgul.",
+    "id":0
   },
   {
     "question": "Hogyan lehet ezt a problémát megoldani?",
-    "answer": "Úgy, hogy lenyugizik."
+    "answer": "Úgy, hogy lenyugizik.",
+    "id":1
   },
   {
     "question": "Hogyan lehetne segíteni neki lenyugizni?",
-    "answer": "*Kérlek töltsd ki :)*"
+    "answer": "*Kérlek töltsd ki :)*",
+    "id": 2
   }
 ]

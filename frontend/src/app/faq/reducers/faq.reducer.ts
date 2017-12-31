@@ -27,7 +27,7 @@ export function reducer(state: FaqsState = initialState, action: faqActions.Acti
     case REMOVE_FAQ:
       return {
         ...state,
-        faqs: [...state.faqs.filter(faq => faq !== <Faq>action.payload)  ]
+        faqs: [...state.faqs.filter(item => item.id != (<Faq>action.payload).id)  ]
       }
 
     default:

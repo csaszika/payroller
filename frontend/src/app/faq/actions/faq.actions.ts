@@ -38,4 +38,6 @@ export class RemoveFaqAction implements Action {
 export type Actions = GetFaqsAction
   | FaqsLoadedAction
   | PostFaqAction
-  | AddFaqAction;
+  | AddFaqAction
+  | RemoveFaqAction
+  | DeleteFaqAction;

@@ -16,8 +16,6 @@ export class FaqContainerComponent implements OnInit {
 
   faqs: Observable<Faq[]>;
   faqForm: FormGroup;
-  isSelected: false;
-  selectedFaq: Faq;
 
   /**
    * @Panni
@@ -27,36 +25,38 @@ export class FaqContainerComponent implements OnInit {
   constructor(private store: Store<fromRoot.FaqFeatureState>) {
     this.faqs = this.store.select(getFaqs);
   }
+
   ngOnInit() {
     this.store.dispatch(new GetFaqsAction());
 
     this.faqForm = new FormGroup(
       {
-        'question': new FormControl(null, Validators.required),
-        'answer': new FormControl(null, Validators.required)
+        question: new FormControl(null, Validators.required),
+        answer: new FormControl(null, Validators.required)
       }
     );
   }
 
-  onAddQuestion() {
-    if(this.faqForm.valid)
-    {this.store.dispatch(new PostFaqAction({question: this.faqForm.get('question').value, answer: this.faqForm.get('answer').value}));
-    this.faqForm.reset();}
+  AddFaq() {
+    let i: number;
+
+    this.faqs.subscribe(
+      (faqArray: Faq[])=> {
+        console.log("faqArray.length: " +faqArray.length);
+        i=faqArray.length;
+      });
+
+    this.store.dispatch(new PostFaqAction({
+      question: this.faqForm.get('question').value,
+      answer: this.faqForm.get('answer').value,
+      id: i
+  }));
+    this.faqForm.reset();
+
   }
 
-  onSelect(index: number){
-    this.faqs.subscribe((faqs: Faq[]) => {
-      return this.selectedFaq = faqs[index];
-    })
-    ;
-  }
-
-  onDeleteQuestion(faq: Faq) {
+  DeleteFaq(faq: Faq) {
     this.store.dispatch(new DeleteFaqAction(faq));
-    this.clearSelection();
   }
 
-  clearSelection(){
-    this.selectedFaq = null;
-  }
 }

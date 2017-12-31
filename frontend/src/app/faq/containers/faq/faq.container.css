@@ -1,3 +1,16 @@
-textarea {
+.faqTextArea {
   width: 80%;
 }
+
+.listItem {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 80%;
+  margin: 5px;
+}
+
+.fa-trash{
+  height: inherit;
+}
+
