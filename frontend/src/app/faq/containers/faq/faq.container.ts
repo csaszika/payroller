@@ -42,9 +42,8 @@ export class FaqContainerComponent implements OnInit {
 
     this.faqs.subscribe(
       (faqArray: Faq[])=> {
-        console.log("faqArray.length: " +faqArray.length);
         i=faqArray.length;
-      });
+      }).unsubscribe();
 
     this.store.dispatch(new PostFaqAction({
       question: this.faqForm.get('question').value,
