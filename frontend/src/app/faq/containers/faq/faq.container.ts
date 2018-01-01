@@ -4,8 +4,8 @@ import {getFaqs} from '../../reducers/faq.selector';
 import {Store} from '@ngrx/store';
 import * as fromRoot from '../../reducers';
 import {DeleteFaqAction, GetFaqsAction, PostFaqAction} from '../../actions/faq.actions';
-import {Faq} from "../../types/faq.types";
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {Faq} from '../../types/faq.types';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-faq-component',
@@ -14,47 +14,37 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 })
 export class FaqContainerComponent implements OnInit {
 
-  faqs: Observable<Faq[]>;
+  faqs$: Observable<Faq[]>;
   faqForm: FormGroup;
 
-  /**
-   * @Panni
-   * todo: use ADD_FAQ and REMOVE_FAQ
-   * todo: faq elements in separated blocks with remove button/icon/whatSatisfiesYou
-   */
-  constructor(private store: Store<fromRoot.FaqFeatureState>) {
-    this.faqs = this.store.select(getFaqs);
+  constructor(private store: Store<fromRoot.FaqFeatureState>,
+              private formBuilder: FormBuilder) {
+    this.faqs$ = this.store.select(getFaqs);
   }
 
   ngOnInit() {
     this.store.dispatch(new GetFaqsAction());
-
-    this.faqForm = new FormGroup(
-      {
-        question: new FormControl(null, Validators.required),
-        answer: new FormControl(null, Validators.required)
-      }
-    );
+    this.defineForm();
   }
 
-  AddFaq() {
-    let i: number;
+  private defineForm() {
+    this.faqForm = this.formBuilder.group({
+      question: [null, Validators.required],
+      answer: [null, Validators.required]
+    });
+  }
 
-    this.faqs.subscribe(
-      (faqArray: Faq[])=> {
-        i=faqArray.length;
-      }).unsubscribe();
-
+  addFaq() {
+    // todo static id number is temporary solution
     this.store.dispatch(new PostFaqAction({
-      question: this.faqForm.get('question').value,
+      id: 3,
       answer: this.faqForm.get('answer').value,
-      id: i
-  }));
+      question: this.faqForm.get('question').value
+    }));
     this.faqForm.reset();
-
   }
 
-  DeleteFaq(faq: Faq) {
+  deleteFaq(faq: Faq) {
     this.store.dispatch(new DeleteFaqAction(faq));
   }
 

@@ -6,14 +6,16 @@ import {ADD_FAQ, FAQS_LOADED, REMOVE_FAQ} from '../actions/faq.action.types';
 export interface FaqsState {
   faqs: Faq[];
 }
+
 export const initialState: FaqsState = {
   faqs: [],
 };
+
 export function reducer(state: FaqsState = initialState, action: faqActions.Actions): FaqsState {
 
   switch (action.type) {
     case FAQS_LOADED:
-         return {
+      return {
         ...state,
         faqs: action.payload as Faq[]
       };
@@ -22,13 +24,13 @@ export function reducer(state: FaqsState = initialState, action: faqActions.Acti
       return {
         ...state,
         faqs: [...state.faqs, action.payload as Faq]
-      }
+      };
 
     case REMOVE_FAQ:
       return {
         ...state,
-        faqs: [...state.faqs.filter(item => item.id != (<Faq>action.payload).id)  ]
-      }
+        faqs: [...state.faqs.filter(item => item.id !== (<Faq>action.payload).id)]
+      };
 
     default:
       return state;

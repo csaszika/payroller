@@ -3,12 +3,13 @@ import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
 
 const routes: Routes = [
-  { path: 'faq', component: FaqContainerComponent}
+  {path: 'faq', component: FaqContainerComponent}
 ];
 
 @NgModule({
-  exports: [ RouterModule ],
-  imports: [ RouterModule.forChild(routes) ],
+  exports: [RouterModule],
+  imports: [RouterModule.forChild(routes)],
 })
 
-export class FaqRoutingModule{ }
+export class FaqRoutingModule {
+}

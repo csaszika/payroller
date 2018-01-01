@@ -13,7 +13,7 @@ export class FaqEffects {
   loadFaqs$ = this.actions$
     .ofType(GET_FAQS)
     .switchMap(() =>
-      this.http.get<Faq[]>('assets/mock-data/faqs.json')
+      this.http.get<Faq[]>('assets/mock-data/faqs$.json')
         .map(faqs => {
           return new FaqsLoadedAction(faqs);
         }));
@@ -22,7 +22,7 @@ export class FaqEffects {
   postFaq$ = this.actions$
     .ofType(POST_FAQ)
     .map((action: PostFaqAction) => {
-      return new AddFaqAction(action.payload as Faq);
+        return new AddFaqAction(action.payload as Faq);
       }
     );
 
@@ -31,7 +31,7 @@ export class FaqEffects {
     .ofType(DELETE_FAQ)
     .map((action: DeleteFaqAction) => {
       return new RemoveFaqAction(action.payload as Faq);
-});
+    });
 
   constructor(private actions$: Actions, private http: HttpClient) {
 

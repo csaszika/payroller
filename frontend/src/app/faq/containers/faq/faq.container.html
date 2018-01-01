@@ -1,11 +1,11 @@
-
 <ul>
-  <li *ngFor="let faq of faqs | async" class="listItem" (mouseover)="hoveredFaq=faq" (mouseleave)="hoveredFaq=null">
+  <li *ngFor="let faq of faqs$ | async" class="list-item">
     <div >
-      Kérdés: {{faq.question}}
-      Válasz: {{faq.answer}}
+      <span>{{faq.question}}</span>
+      <span>{{faq.answer}}</span>
     </div>
-    <span *ngIf="hoveredFaq==faq" class="fa fa-trash" (click)="DeleteFaq(faq)"></span>
+    <button class="fa fa-trash"
+            (click)="deleteFaq(faq)"></button>
   </li>
 </ul>
 <hr>
@@ -13,19 +13,21 @@
 <div>
   <form [formGroup]="faqForm">
     <textarea
-      class="faqTextArea"
-      type="text"
+      class="faq-text-area"
       placeholder="raise a new question"
       rows="3"
       formControlName="question"></textarea>
     <textarea
-      class="faqTextArea"
-      type="text"
+      class="faq-text-area"
       placeholder="give an answer"
       rows="3"
       formControlName="answer"></textarea>
   </form>
-
-  <button type="button" (click)="AddFaq()" class="btn btn-primary" [disabled]="!faqForm.valid">Add</button>
-
 </div>
+
+<button type="button"
+        class="btn btn-primary"
+        (click)="addFaq()"
+        [disabled]="!faqForm.valid"
+        value="Add">
+</button>
