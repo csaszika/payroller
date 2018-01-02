@@ -15,9 +15,17 @@ import {MenuItemEffects} from './app-core/effects/menu-item.effects';
 import {HttpClientModule} from '@angular/common/http';
 import {ProductSheetModule} from './product-sheet/product-sheet.module';
 import {FaqModule} from './faq/faq.module';
-import {TranslationService} from "../translation/translation.service";
-import {TranslatePipe} from "../translation/translate.pipe";
+// import {TranslationService} from "../translation/translation.service";
+// import {TranslatePipe} from "../translation/translate.pipe";
 
+import { HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  console.log('httpLoaderFactory was called');
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   imports: [
@@ -29,17 +37,25 @@ import {TranslatePipe} from "../translation/translate.pipe";
     ProductSheetModule,
     SidebarModule,
     StoreModule.forRoot(reducers, {initialState}),
-    EffectsModule.forRoot([MenuItemEffects])
+    EffectsModule.forRoot([MenuItemEffects]),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
   ],
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeContainerComponent,
     MenuSideBarContainerComponent,
-    TranslatePipe
+    // TranslatePipe
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [TranslationService],
+  providers: [],
+  // providers: [TranslationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

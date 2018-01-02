@@ -8,6 +8,13 @@
 
   <!-- overflow problem -->
   <div class="col-lg-10">
+    <!--Magyar/anhol felirat kéne megjelenjen egy lsitából, key value pár? magyar:hun, english: en, deutsh: de-->
+    <button (click)="switchLanguage('en')">en</button>
+    <button (click)="switchLanguage('hun')">hun</button>
+
+    <div>
+      {{ 'Home' | translate }}
+    </div>
     <router-outlet></router-outlet>
   </div>
 
