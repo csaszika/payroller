@@ -24,3 +24,12 @@ app-header {
   min-height: 75vh;
 }
 
+.card {
+  border-radius: 3px;
+  background: darkcyan;
+  padding: 16px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+  box-shadow: 0 0 5px #000;
+}
+

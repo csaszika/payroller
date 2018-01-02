@@ -1,13 +1,45 @@
 .faq-text-area {
   width: 80%;
+  border-radius: 10%;
+}
+
+.faqs-list {
+  overflow: auto;
+  height: 50%;
 }
 
 .list-item {
-  display: flex;
+  display: block;
   flex-flow: row;
   justify-content: space-between;
-  width: 80%;
   margin: 5px;
+  padding: 0;
+}
+
+.question {
+  color: blue;
+  font-weight: bold;
+}
+
+.answer {
+  color: darkred;
+  font-weight: bold;
+}
+
+.delete-icon {
+  border-color: transparent;
+  background-color: transparent;
+  color: crimson;
+  position: absolute;
+  right: 0;
+  padding: 10px;
+  font-size: 25px;
+  opacity: 0;
+  transition: .5s;
+}
+
+.list-item:hover .delete-icon {
+  opacity: 1;
 }
 
 .fa-trash {

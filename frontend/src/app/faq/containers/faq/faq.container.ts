@@ -12,7 +12,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   templateUrl: './faq.container.html',
   styleUrls: ['./faq.container.css']
 })
-export class FaqContainerComponent implements OnInit {
+export class FaqsContainerComponent implements OnInit {
 
   faqs$: Observable<Faq[]>;
   faqForm: FormGroup;

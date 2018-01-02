@@ -13,7 +13,7 @@ export class FaqEffects {
   loadFaqs$ = this.actions$
     .ofType(GET_FAQS)
     .switchMap(() =>
-      this.http.get<Faq[]>('assets/mock-data/faqs$.json')
+      this.http.get<Faq[]>('assets/mock-data/faqs.json')
         .map(faqs => {
           return new FaqsLoadedAction(faqs);
         }));

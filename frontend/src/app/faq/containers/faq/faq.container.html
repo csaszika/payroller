@@ -1,33 +1,38 @@
-<ul>
-  <li *ngFor="let faq of faqs$ | async" class="list-item">
-    <div >
-      <span>{{faq.question}}</span>
-      <span>{{faq.answer}}</span>
-    </div>
-    <button class="fa fa-trash"
-            (click)="deleteFaq(faq)"></button>
-  </li>
-</ul>
-<hr>
-
 <div>
-  <form [formGroup]="faqForm">
+  <ul class="row faqs-list">
+    <li *ngFor="let faq of faqs$ | async" class="row col-md-9 card list-item">
+      <div class="col-md-9">
+        <span class="row question">{{faq.question}}</span>
+        <span class="row answer">{{faq.answer}}</span>
+      </div>
+      <div class="col-md-3">
+        <div>
+          <button class="fa fa-trash delete-icon"
+                  (click)="deleteFaq(faq)"></button>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <div class="row">
+    <form [formGroup]="faqForm">
     <textarea
       class="faq-text-area"
       placeholder="raise a new question"
       rows="3"
       formControlName="question"></textarea>
-    <textarea
-      class="faq-text-area"
-      placeholder="give an answer"
-      rows="3"
-      formControlName="answer"></textarea>
-  </form>
-</div>
+      <textarea
+        class="faq-text-area"
+        placeholder="give an answer"
+        rows="3"
+        formControlName="answer"></textarea>
+    </form>
+    <button type="button"
+            class="btn btn-primary"
+            (click)="addFaq()"
+            [disabled]="!faqForm.valid"
+            [value]="'Add'">
+    </button>
+  </div>
 
-<button type="button"
-        class="btn btn-primary"
-        (click)="addFaq()"
-        [disabled]="!faqForm.valid"
-        value="Add">
-</button>
+</div>

@@ -5,7 +5,7 @@ import {StoreModule} from '@ngrx/store';
 import {FAQS_STATE, initialState, reducers} from './reducers/index';
 import {EffectsModule} from '@ngrx/effects';
 import {FaqEffects} from './effects/faq.effects';
-import {FaqContainerComponent} from './containers/faq/faq.container';
+import {FaqsContainerComponent} from './containers/faq/faq.container';
 import {FaqRoutingModule} from './faq-routing.module';
 import {ReactiveFormsModule} from '@angular/forms';
 
@@ -19,7 +19,7 @@ import {ReactiveFormsModule} from '@angular/forms';
     EffectsModule.forFeature([FaqEffects])
 
   ],
-  declarations: [FaqContainerComponent]
+  declarations: [FaqsContainerComponent]
 })
 export class FaqModule {
 }
