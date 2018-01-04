@@ -1,21 +1,15 @@
-<app-header></app-header>
-
-<div class="row fullRemainHeight">
-
-  <div class="col-lg-2">
-    <menu-side-bar></menu-side-bar>
-  </div>
-
-  <!-- overflow problem -->
-  <div class="col-lg-10">
-    <!--Magyar/anhol felirat kéne megjelenjen egy lsitából, key value pár? magyar:hun, english: en, deutsh: de-->
-    <button (click)="switchLanguage('en')">en</button>
-    <button (click)="switchLanguage('hun')">hun</button>
-
-    <div>
-      {{ 'Home' | translate }}
+<div class="frame">
+    <div class="header">
+      <app-header></app-header>
     </div>
-    <router-outlet></router-outlet>
-  </div>
+    <div class="not-header">
+      <div class="menu">
+        <menu-side-bar></menu-side-bar>
+      </div>
 
+      <!-- overflow problem -->
+      <div class="main-content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
 </div>

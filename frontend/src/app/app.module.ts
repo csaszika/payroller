@@ -19,7 +19,7 @@ import {FaqModule} from './faq/faq.module';
 // import {TranslatePipe} from "../translation/translate.pipe";
 
 import { HttpClient } from '@angular/common/http';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import {TranslateModule, TranslateLoader, TranslateService} from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 export function HttpLoaderFactory(http: HttpClient) {
@@ -54,8 +54,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     // TranslatePipe
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  providers: [],
-  // providers: [TranslationService],
+  // providers: [],
+  providers: [TranslateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

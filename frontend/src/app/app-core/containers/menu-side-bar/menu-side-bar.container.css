@@ -1,39 +1,41 @@
-nav {
-  height: 100%;
-  width: auto;
-  display: block;
-  background-color: blueviolet;
-  z-index: 1;
-  left: 0;
-  position: fixed;
-}
+/*nav {*/
+  /*height: 100%;*/
+  /*width: 100%;*/
+  /*!*width: auto;*!*/
+  /*display: block;*/
+  /*background-color: #404040;*/
+  /*z-index: 1;*/
+  /*left: 0;*/
+  /*position: fixed;*/
+/*}*/
 
-nav a div{
-  height: 5rem;
-  width: auto;
-  padding: 2rem;
-  cursor: pointer;
-  display: block;
-  vertical-align: center;
-  align-content: center;
-  color: black;
-  transition: all .2s ease-in-out;
-  font-weight: bold;
-}
+/*nav a div{*/
+  /*height: 5rem;*/
+  /*!*width: inherit;*!*/
+  /*!*padding: 2rem;*!*/
+  /*cursor: pointer;*/
+  /*display: block;*/
+  /*vertical-align: center;*/
+  /*align-content: center;*/
+  /*color: #c1c1c1;*/
+  /*transition: all .2s ease-in-out;*/
+  /*font-weight: bold;*/
+/*}*/
 
-a {
-  text-decoration: none;
-}
+/*a {*/
+  /*text-decoration: none;*/
+/*}*/
 
-nav a div:hover{
-  transform: scale(1.1);
-  background-color: darkmagenta;
-}
+/*nav a div:hover{*/
+  /*transform: scale(1.1);*/
+  /*background-color: #c1c1c1;*/
+  /*color: #404040;*/
+/*}*/
 
-nav >> a >> div:active{
-  transform: scale(1.1);
-}
+/*nav >> a >> div:active{*/
+  /*transform: scale(1.1);*/
+/*}*/
 
-:focus {
-  outline: none;
-}
+/*:focus {*/
+  /*outline: none;*/
+/*}*/

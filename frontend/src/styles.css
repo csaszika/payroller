@@ -1,45 +1,54 @@
 @import '~font-awesome/css/font-awesome.css';
-app-root {
-  display: flex;
-  flex-direction: column;
-}
-body {
+html, body {
+  /*display: table;*/
   height: 100%;
+  width: 100%;
+  background-color: #2e7db2;
+}
+.frame{
+  /*display: flex;*/
+  /*align-items: stretch;*/
+  height: 100%;
+  width: 100%;
 }
 
-app-header {
-  min-height: 15vh;
+.header {
+
+  display: block;
+  height: 15%;
+  width: 100%;
+  background: #102737;
+  color: #7f767d;
+  /*background: #c1c1c1; !* For browsers that do not support gradients *!*/
+  /*background: linear-gradient(to bottom right,#404040, #c1c1c1);*/
+  /*background: -webkit-linear-gradient(to top right,#404040, #c1c1c1); !* For Safari 5.1 to 6.0 *!*/
+  /*background: -o-linear-gradient(to top right, #404040, #c1c1c1); !* For Opera 11.1 to 12.0 *!*/
+  /*background: -moz-linear-gradient(to top right,#404040, #c1c1c1); !* For Firefox 3.6 to 15 *!*/
+  /*background: linear-gradient(to top right, #404040, #c1c1c1); !* Standard syntax *!*/
+  }
+.not-header{
+  height: 80%;
+  width: 100%;
+  background-color: #9d223c;
   display: inline-flex;
-  align-items: center;
-  background: #237486; /* For browsers that do not support gradients */
-  background: linear-gradient(#eb01a5, #d13531);
-  background: -webkit-linear-gradient(-90deg, #1df4ff, #559dff); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(-90deg, #1df4ff, #559dff); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(-90deg, #1df4ff, #559dff); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(-90deg, #1df4ff, #559dff); /* Standard syntax */
+  align-content: stretch;
+  align-items: stretch;
+}
+.menu {
+  min-width: 15%;
+  background-color: #102737;
+  color: #7f767d;
 
 }
 
-app-header > div {
-  min-width: 100%;
-  min-height: inherit;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
+.main-content {
+  width: inherit;
+  background-color: #77d5f7;
+  /*background: #c1c1c1; !* For browsers that do not support gradients *!*/
+  /*background: linear-gradient(to bottom right,#404040, #c1c1c1);*/
+  /*background: -webkit-linear-gradient(to top right,#404040, #c1c1c1); !* For Safari 5.1 to 6.0 *!*/
+  /*background: -o-linear-gradient(to top right, #404040, #c1c1c1); !* For Opera 11.1 to 12.0 *!*/
+  /*background: -moz-linear-gradient(to top right,#404040, #c1c1c1); !* For Firefox 3.6 to 15 *!*/
+  /*background: linear-gradient(to top right, #404040, #c1c1c1); !* Standard syntax *!*/
 
-app-header > div > ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-flow: wrap;
-}
-app-header > div > ul > li {
-  margin: 5px;
-}
-.fullRemainHeight {
-  min-height: 75vh;
 }
