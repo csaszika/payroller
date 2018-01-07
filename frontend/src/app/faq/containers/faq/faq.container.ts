@@ -29,8 +29,8 @@ export class FaqsContainerComponent implements OnInit {
 
   private defineForm() {
     this.faqForm = this.formBuilder.group({
-      question: [null, Validators.required],
-      answer: [null, Validators.required]
+      question: ['', Validators.required],
+      answer: ['', Validators.required]
     });
   }
 

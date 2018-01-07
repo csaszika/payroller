@@ -1,19 +1,4 @@
 <div>
-  <!--<ul class="row faqs-list">-->
-  <!--<li *ngFor="let faq of faqs$ | async" class="row col-md-9 card list-item">-->
-  <!--<div class="col-md-9">-->
-  <!--<span class="row question">{{faq.question}}</span>-->
-  <!--<span class="row answer">{{faq.answer}}</span>-->
-  <!--</div>-->
-  <!--<div class="col-md-3">-->
-  <!--<div>-->
-  <!--<button class="fa fa-trash delete-icon"-->
-  <!--(click)="deleteFaq(faq)"></button>-->
-  <!--</div>-->
-  <!--</div>-->
-  <!--</li>-->
-  <!--</ul>-->
-
   <p-dataList class="ui-g-11"
               [value]="faqs$ | async"
               [paginator]="true"

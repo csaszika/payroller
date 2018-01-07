@@ -1,4 +1,5 @@
 @import '~font-awesome/css/font-awesome.css';
+
 app-root {
   display: flex;
   flex-direction: column;
@@ -20,8 +21,8 @@ app-header {
   /*background: -o-linear-gradient(-90deg, #1df4ff, #559dff); !* For Opera 11.1 to 12.0 *!*/
   /*background: -moz-linear-gradient(-90deg, #1df4ff, #559dff); !* For Firefox 3.6 to 15 *!*/
   /*background: linear-gradient(-90deg, #1df4ff, #559dff); !* Standard syntax *!*/
-
 }
+
 .fullRemainHeight {
   min-height: 75vh;
 }
