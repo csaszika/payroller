@@ -16,7 +16,7 @@
   },
   {
     "name": "FAQ",
-    "routerLink": "/faq",
+    "routerLink": "/faqs",
     "icon": "fa-question-circle"
   },
   {

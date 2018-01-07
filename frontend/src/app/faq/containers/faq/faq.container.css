@@ -1,0 +1,39 @@
+.faq-list-item {
+  width: 100%;
+  display: block;
+  flex-flow: row;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 0;
+}
+
+.question {
+  color: blue;
+  font-weight: bold;
+}
+
+.answer {
+  color: darkred;
+  font-weight: bold;
+}
+
+.delete-icon {
+  border-color: transparent;
+  background-color: transparent;
+  color: crimson;
+  position: absolute;
+  right: 100px;
+  padding: 10px;
+  font-size: 25px;
+  opacity: 0;
+  transition: .5s;
+}
+
+.faq-list-item:hover .delete-icon {
+  opacity: 1;
+}
+
+.faq-text-area {
+  border: 1px solid darkviolet;
+}
+
