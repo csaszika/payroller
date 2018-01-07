@@ -8,6 +8,7 @@ import {FaqEffects} from './effects/faq.effects';
 import {FaqsContainerComponent} from './containers/faq/faq.container';
 import {FaqRoutingModule} from './faq-routing.module';
 import {ReactiveFormsModule} from '@angular/forms';
+import {ButtonModule, DataListModule, InputTextareaModule} from 'primeng/primeng';
 
 @NgModule({
   imports: [
@@ -15,6 +16,9 @@ import {ReactiveFormsModule} from '@angular/forms';
     HttpClientModule,
     FaqRoutingModule,
     ReactiveFormsModule,
+    ButtonModule,
+    DataListModule,
+    InputTextareaModule,
     StoreModule.forFeature(FAQS_STATE, reducers, {initialState}),
     EffectsModule.forFeature([FaqEffects])
 

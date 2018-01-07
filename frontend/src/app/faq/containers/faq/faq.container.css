@@ -1,14 +1,5 @@
-.faq-text-area {
-  width: 80%;
-  border-radius: 10%;
-}
-
-.faqs-list {
-  overflow: auto;
-  height: 50%;
-}
-
-.list-item {
+.faq-list-item {
+  width: 100%;
   display: block;
   flex-flow: row;
   justify-content: space-between;
@@ -31,18 +22,18 @@
   background-color: transparent;
   color: crimson;
   position: absolute;
-  right: 0;
+  right: 100px;
   padding: 10px;
   font-size: 25px;
   opacity: 0;
   transition: .5s;
 }
 
-.list-item:hover .delete-icon {
+.faq-list-item:hover .delete-icon {
   opacity: 1;
 }
 
-.fa-trash {
-  height: inherit;
+.faq-text-area {
+  border: 1px solid darkviolet;
 }
 

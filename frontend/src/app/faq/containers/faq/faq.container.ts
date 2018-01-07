@@ -35,11 +35,13 @@ export class FaqsContainerComponent implements OnInit {
   }
 
   addFaq() {
+    const question = this.faqForm.get('question').value;
+    const questionSign = question.substr(question.length - 1) === '?' ? '' : '?';
     // todo static id number is temporary solution
     this.store.dispatch(new PostFaqAction({
       id: 3,
       answer: this.faqForm.get('answer').value,
-      question: this.faqForm.get('question').value
+      question: this.faqForm.get('question').value + questionSign
     }));
     this.faqForm.reset();
   }

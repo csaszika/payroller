@@ -5,31 +5,30 @@ app-root {
 }
 body {
   height: 100%;
+  overflow-x: hidden;
+  background-color: lightblue;
 }
 
 app-header {
-  min-height: 15vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #237486; /* For browsers that do not support gradients */
-  background: linear-gradient(#eb01a5, #d13531);
-  background: -webkit-linear-gradient(-90deg, #1df4ff, #559dff); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(-90deg, #1df4ff, #559dff); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(-90deg, #1df4ff, #559dff); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(-90deg, #1df4ff, #559dff); /* Standard syntax */
+  /*min-height: 15vh;*/
+  /*display: flex;*/
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  /*background: #237486; !* For browsers that do not support gradients *!*/
+  /*background: linear-gradient(#eb01a5, #d13531);*/
+  /*background: -webkit-linear-gradient(-90deg, #1df4ff, #559dff); !* For Safari 5.1 to 6.0 *!*/
+  /*background: -o-linear-gradient(-90deg, #1df4ff, #559dff); !* For Opera 11.1 to 12.0 *!*/
+  /*background: -moz-linear-gradient(-90deg, #1df4ff, #559dff); !* For Firefox 3.6 to 15 *!*/
+  /*background: linear-gradient(-90deg, #1df4ff, #559dff); !* Standard syntax *!*/
 
 }
 .fullRemainHeight {
   min-height: 75vh;
 }
 
-.card {
-  border-radius: 3px;
-  background: darkcyan;
-  padding: 16px;
-  box-sizing: border-box;
-  margin-bottom: 16px;
-  box-shadow: 0 0 5px #000;
+.ui-widget-header {
+  background: linear-gradient(to bottom, #01b0af 0%, #3745ff 100%);
+  color: black;
+  font-weight: bold;
 }
 

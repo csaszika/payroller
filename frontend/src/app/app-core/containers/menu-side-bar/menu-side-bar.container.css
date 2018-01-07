@@ -3,7 +3,6 @@ nav {
   width: auto;
   display: block;
   background-color: blueviolet;
-  z-index: 1;
   left: 0;
   position: fixed;
 }
