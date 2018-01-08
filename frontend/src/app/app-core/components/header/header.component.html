@@ -2,7 +2,7 @@
    <h1>{{title$ | async}}</h1>
 
           <ul>
-           <li *ngFor="let language of languages" (click)="switchLanguage(language)" class="languages">
+           <li *ngFor="let language of languages" (click)="switchLanguage(language)" class="language-item">
              {{language}}
            </li>
          </ul>

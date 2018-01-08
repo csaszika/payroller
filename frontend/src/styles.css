@@ -3,52 +3,43 @@ html, body {
   /*display: table;*/
   height: 100%;
   width: 100%;
-  background-color: #2e7db2;
+
+  /*background-color: #2e7db2;*/
 }
 .frame{
   /*display: flex;*/
   /*align-items: stretch;*/
   height: 100%;
   width: 100%;
+  /*overflow: scroll;*/
 }
 
-.header {
-
-  display: block;
-  height: 15%;
-  width: 100%;
-  background: #102737;
-  color: #7f767d;
-  /*background: #c1c1c1; !* For browsers that do not support gradients *!*/
-  /*background: linear-gradient(to bottom right,#404040, #c1c1c1);*/
-  /*background: -webkit-linear-gradient(to top right,#404040, #c1c1c1); !* For Safari 5.1 to 6.0 *!*/
-  /*background: -o-linear-gradient(to top right, #404040, #c1c1c1); !* For Opera 11.1 to 12.0 *!*/
-  /*background: -moz-linear-gradient(to top right,#404040, #c1c1c1); !* For Firefox 3.6 to 15 *!*/
-  /*background: linear-gradient(to top right, #404040, #c1c1c1); !* Standard syntax *!*/
-  }
-.not-header{
-  height: 80%;
-  width: 100%;
-  background-color: #9d223c;
+.table{
+  /*height: 85%;*/
+  /*height: 100%;*/
+  /*width: 100%;*/
+  /*background-color: #9d223c;*/
   display: inline-flex;
   align-content: stretch;
   align-items: stretch;
 }
-.menu {
-  min-width: 15%;
-  background-color: #102737;
-  color: #7f767d;
 
+.menu {
+  /*overflow: auto;*/
+  /*position: fixed;*/
+  /*display: flex;*/
+  /*float: left;*/
 }
+
+
 
 .main-content {
   width: inherit;
-  background-color: #77d5f7;
-  /*background: #c1c1c1; !* For browsers that do not support gradients *!*/
-  /*background: linear-gradient(to bottom right,#404040, #c1c1c1);*/
-  /*background: -webkit-linear-gradient(to top right,#404040, #c1c1c1); !* For Safari 5.1 to 6.0 *!*/
-  /*background: -o-linear-gradient(to top right, #404040, #c1c1c1); !* For Opera 11.1 to 12.0 *!*/
-  /*background: -moz-linear-gradient(to top right,#404040, #c1c1c1); !* For Firefox 3.6 to 15 *!*/
-  /*background: linear-gradient(to top right, #404040, #c1c1c1); !* Standard syntax *!*/
+  /*background-color: #bae2d2;*/
+  /*background-color: #deece6;*/
+  background-color: #d8b27d;
+  overflow: auto;
+
 
 }
+
