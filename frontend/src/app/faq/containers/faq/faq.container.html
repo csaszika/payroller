@@ -1,9 +1,47 @@
-<ul>
-  <li *ngFor="let item of faqs | async">
-    <div>
-      Kérdés: {{item.question}}
-      <hr>
-      Válasz: {{item.answer}}
-    </div>
-  </li>
-</ul>
+<div>
+  <p-dataList class="ui-g-11"
+              [value]="faqs$ | async"
+              [paginator]="true"
+              [rows]="5">
+    <p-header>
+      FAQs
+    </p-header>
+    <ng-template let-faq pTemplate="item">
+      <div class="ui-g ui-fluid" style="border-bottom: 1px solid #ff02fd">
+        <div class="ui-g-12 faq-list-item">
+          <div class="ui-g-10 question">{{faq.question}}</div>
+          <div class="ui-g-10 answer">{{faq.answer}}</div>
+          <div class="ui-g delete-icon">
+            <i class="fa fa-trash"
+               (click)="deleteFaq(faq)" style="cursor:pointer">
+            </i>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-dataList>
+
+  <div class="ui-g-11">
+    <form [formGroup]="faqForm">
+      <textarea pInputTextarea
+                class="faq-text-area"
+                cols="114"
+                rows="3"
+                placeholder="Ask a question..."
+                formControlName="question"></textarea>
+      <textarea pInputTextarea
+                class="faq-text-area"
+                cols="114"
+                rows="3"
+                placeholder="Answer it..."
+                formControlName="answer"></textarea>
+    </form>
+    <button pButton
+            type="button"
+            class="btn btn-primary"
+            (click)="addFaq()"
+            [disabled]="!faqForm.valid"
+            label="Add">
+    </button>
+  </div>
+</div>

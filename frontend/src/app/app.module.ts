@@ -15,8 +15,6 @@ import {MenuItemEffects} from './app-core/effects/menu-item.effects';
 import {HttpClientModule} from '@angular/common/http';
 import {ProductSheetModule} from './product-sheet/product-sheet.module';
 import {FaqModule} from './faq/faq.module';
-// import {TranslationService} from "../translation/translation.service";
-// import {TranslatePipe} from "../translation/translate.pipe";
 
 import { HttpClient } from '@angular/common/http';
 import {TranslateModule, TranslateLoader, TranslateService} from '@ngx-translate/core';
@@ -51,7 +49,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     HeaderComponent,
     HomeContainerComponent,
     MenuSideBarContainerComponent,
-    // TranslatePipe
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   // providers: [],

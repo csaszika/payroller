@@ -1,22 +1,37 @@
-import {FaqType} from '../types/faq.type';
+import {Faq} from '../types/faq.types';
 import * as faqActions from '../actions/faq.actions';
-import {FAQS_LOADED} from '../actions/faq.action.types';
+import {ADD_FAQ, FAQS_LOADED, REMOVE_FAQ} from '../actions/faq.action.types';
 
 
 export interface FaqsState {
-  faqs: FaqType[];
+  faqs: Faq[];
 }
+
 export const initialState: FaqsState = {
   faqs: [],
 };
+
 export function reducer(state: FaqsState = initialState, action: faqActions.Actions): FaqsState {
 
   switch (action.type) {
     case FAQS_LOADED:
-         return {
+      return {
         ...state,
-        faqs: action.payload as FaqType[]
+        faqs: action.payload as Faq[]
       };
+
+    case ADD_FAQ:
+      return {
+        ...state,
+        faqs: [...state.faqs, action.payload as Faq]
+      };
+
+    case REMOVE_FAQ:
+      return {
+        ...state,
+        faqs: [...state.faqs.filter(item => item.id !== (<Faq>action.payload).id)]
+      };
+
     default:
       return state;
   }
