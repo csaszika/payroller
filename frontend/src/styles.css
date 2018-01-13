@@ -2,43 +2,25 @@
 
 @import '~font-awesome/css/font-awesome.css';
 html, body {
-  /*display: table;*/
   height: 100%;
   width: 100%;
 
-  /*background-color: #2e7db2;*/
 }
 .frame{
-  /*display: flex;*/
-  /*align-items: stretch;*/
   height: 100%;
   width: 100%;
-  /*overflow: scroll;*/
 }
 
 .table{
-  /*height: 85%;*/
-  /*height: 100%;*/
-  /*width: 100%;*/
-  /*background-color: #9d223c;*/
+  height: 100%;
   display: inline-flex;
   align-content: stretch;
   align-items: stretch;
 }
 
-.menu {
-  /*overflow: auto;*/
-  /*position: fixed;*/
-  /*display: flex;*/
-  /*float: left;*/
-}
-
-
 
 .main-content {
   width: inherit;
-  /*background-color: #bae2d2;*/
-  /*background-color: #deece6;*/
   background-color: #d8b27d;
   overflow: auto;
 
