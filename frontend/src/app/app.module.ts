@@ -6,7 +6,6 @@ import {BrowserModule} from '@angular/platform-browser';
 import {DataTableModule, SidebarModule} from 'primeng/primeng';
 import {EffectsModule} from '@ngrx/effects';
 import {FaqModule} from './faq/faq.module';
-import {HeaderComponent} from './app-core/components/header/header.component';
 import {HomeContainerComponent} from './app-core/containers/home/home.container';
 import {HttpClientModule} from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
@@ -46,7 +45,6 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   declarations: [
     AppComponent,
-    HeaderComponent,
     HomeContainerComponent,
     MenuSideBarContainerComponent,
   ],
