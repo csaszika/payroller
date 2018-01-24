@@ -1,29 +1,7 @@
-
-
 @import '~font-awesome/css/font-awesome.css';
+
 html, body {
   height: 100%;
   width: 100%;
-
-}
-.frame{
-  height: 100%;
-  width: 100%;
-}
-
-.table{
-  height: 100%;
-  display: inline-flex;
-  align-content: stretch;
-  align-items: stretch;
-}
-
-
-.main-content {
-  width: inherit;
-  background-color: #d8b27d;
-  overflow: auto;
-
-
 }
 
