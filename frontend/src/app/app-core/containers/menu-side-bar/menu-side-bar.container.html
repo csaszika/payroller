@@ -1,10 +1,26 @@
-<nav>
-  <a *ngFor="let item of menuItems$ | async">
-    <div routerLink={{item.routerLink}}
-         [ngClass]="{'selectedMenuItem' : (item.name == selectedMenuItem)}"
-         (focus)="blur" >
-      <span class="ui-button-icon-left ui-clickable fa fa-fw {{item.icon}}" ></span>
-      <span>{{ item.name}}</span>
+<div class="side-bar-container">
+  <img src="../../assets/sewing_machine.svg" class="img">
+
+  <hr>
+
+  <nav class="menu-container">
+    <div *ngFor="let item of menuItems$ | async" class="menu-link">
+      <div routerLink={{item.routerLink}}
+           (focus)="blur"
+           class="menu-item">
+        <span class="ui-button-icon-left ui-clickable fa fa-fw {{item.icon}}"></span>
+        <span>{{item.name | translate}}</span>
+      </div>
     </div>
-  </a>
-</nav>
+
+    <hr>
+
+    <div class="container-languages menu-item">
+      <span class=" fa fa-fw fa-language"></span>
+      <span *ngFor="let language of languages" (click)="switchLanguage(language)" class="languages">
+         <span class="language-item" *ngIf="language != this.translate.currentLang"> {{language }}  </span>
+      </span>
+    </div>
+
+  </nav>
+</div>

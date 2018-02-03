@@ -1,14 +1,13 @@
-<!--<app-header></app-header>-->
+<div class="frame">
 
-<div class="row fullRemainHeight">
+  <div class="table">
+    <div class="menu">
+      <menu-side-bar></menu-side-bar>
+    </div>
 
-  <div>
-    <menu-side-bar></menu-side-bar>
+    <!-- overflow problem -->
+    <div class="main-content" >
+      <router-outlet></router-outlet>
+    </div>
   </div>
-
-  <!-- overflow problem -->
-  <div class="col-md-offset-2">
-    <router-outlet></router-outlet>
-  </div>
-
 </div>
