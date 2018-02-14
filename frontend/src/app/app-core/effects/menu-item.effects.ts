@@ -1,12 +1,12 @@
 import {Injectable} from '@angular/core';
 import {Actions, Effect} from '@ngrx/effects';
+import {GET_MENU_ITEMS} from '../actions/menu-items/menu-items-action.types';
+import {HttpClient} from '@angular/common/http';
+import {MenuItemsLoadedAction} from '../actions/menu-items/menu-items.actions';
+import {MenuItem} from '../types/menu-items.types';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/delay';
-import {MenuItemsLoadedAction} from '../actions/menu-items/menu-items.actions';
-import {MenuItem} from '../types/menu-items.types';
-import {GET_MENU_ITEMS} from '../actions/menu-items/menu-items-action.types';
-import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class MenuItemEffects {

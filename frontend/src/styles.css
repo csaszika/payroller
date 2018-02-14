@@ -1,35 +1,7 @@
 @import '~font-awesome/css/font-awesome.css';
 
-app-root {
-  display: flex;
-  flex-direction: column;
-}
-body {
+html, body {
   height: 100%;
-  overflow-x: hidden;
-  background-color: lightblue;
-}
-
-app-header {
-  /*min-height: 15vh;*/
-  /*display: flex;*/
-  /*align-items: center;*/
-  /*justify-content: center;*/
-  /*background: #237486; !* For browsers that do not support gradients *!*/
-  /*background: linear-gradient(#eb01a5, #d13531);*/
-  /*background: -webkit-linear-gradient(-90deg, #1df4ff, #559dff); !* For Safari 5.1 to 6.0 *!*/
-  /*background: -o-linear-gradient(-90deg, #1df4ff, #559dff); !* For Opera 11.1 to 12.0 *!*/
-  /*background: -moz-linear-gradient(-90deg, #1df4ff, #559dff); !* For Firefox 3.6 to 15 *!*/
-  /*background: linear-gradient(-90deg, #1df4ff, #559dff); !* Standard syntax *!*/
-}
-
-.fullRemainHeight {
-  min-height: 75vh;
-}
-
-.ui-widget-header {
-  background: linear-gradient(to bottom, #01b0af 0%, #3745ff 100%);
-  color: black;
-  font-weight: bold;
+  width: 100%;
 }
 
